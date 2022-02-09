@@ -24,12 +24,14 @@ import django_on_heroku
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 #SECRET_KEY = 'hpbv()ep00boce&o0w7z1h)st148(*m@6@-rk$nn)(n9ojj4c0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bamburiafya.herokuapp.com']
+ALLOWED_HOSTS = ['bamburiafya.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -84,13 +86,15 @@ WSGI_APPLICATION = 'hospitalmanagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        #'HOST': 'ec2-18-215-111-67.compute-1.amazonaws.com',
-        #'PORT': 5432,
-        #'USER': 'vescqbxdgtktva',
-        #'PASSWORD': '9faad0538835de7f3a86bddb2bbe5ee8e238bdc5b00e5e1359e90e22865fee51'
+        'NAME': 'n9ojj4c0',
+        'HOST': '*m@6@-rk$nn',
+        'PORT': 148,
+        'USER': 'hpbv',
+        'PASSWORD': 'ep00boce&o0w7z1h'
     }
 }
+
+
 
 # Password validation
 
