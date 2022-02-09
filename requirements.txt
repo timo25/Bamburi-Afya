@@ -86,6 +86,7 @@ django-js-asset==1.2.2
 django-mathfilters==1.0.0
 django-mptt==0.12.0
 django-multiselectfield==0.1.12
+django-on-heroku==1.1.2
 django-phonenumber-field==5.1.0
 django-polymorphic==3.0.0
 django-post-office==3.5.3

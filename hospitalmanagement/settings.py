@@ -11,14 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
-django_heroku.settings(locals())
+import django_on_heroku
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
-STATIC_DIR=os.path.join(BASE_DIR,'static')
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -63,7 +62,7 @@ ROOT_URLCONF = 'hospitalmanagement.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': ['[Bmaburi-Afya]/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +126,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_DIR=os.path.join(BASE_DIR,'static')
 
 
 STATIC_URL = '/static/'
@@ -135,6 +136,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS=[STATIC_DIR,]
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
@@ -158,3 +160,5 @@ EMAIL_RECEIVING_USER = ['afyamedical@gmail.com'] # email on which you will recei
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+django_on_heroku.settings(locals())
