@@ -64,7 +64,7 @@ ROOT_URLCONF = 'hospitalmanagement.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['[Bmaburi-Afya]/templates'],
+        'DIRS': ['[Bamburi-Afya]/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
